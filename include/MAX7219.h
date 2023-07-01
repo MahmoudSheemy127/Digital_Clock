@@ -7,7 +7,7 @@
 #define SHUT_DOWN_CMD 0x0C
 #define NORMAL_OPERATION 0x01
 #define SCAN_LIMIT 0x0B
-#define SHOW_ALL 0x02
+#define SHOW_ALL 0xFF
 
 void MAX7219_Init();
 void MAX7219_SendDigit(u8 digit, u8 num);

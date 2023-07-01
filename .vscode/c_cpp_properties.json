@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "D:/Work/Embedded/Projects/Digital_Clock/Code/include"
+                "D:/Work/Work/Embedded/digital_clock/Code/include"
             ],
             "defines": [
                 "_DEBUG",
@@ -12,7 +12,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "D:/Work/Embedded/tools/avr8-gnu-toolchain/bin/avr-gcc.exe",
+            "compilerPath": "D:/Courses/Courses/IMT diploma/tools/01- Embedded Systems AVR Tools/01- IMT SDK/IMT_SDK_Win_64/IMT_SDK_Win_64/WinAVR/bin/avr-gcc.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-gcc-x64"

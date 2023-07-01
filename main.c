@@ -6,27 +6,34 @@
 #include <RTC_Init.h>
 #include "MAX7219.h"
 
+//display time on 7-Seg display
+void display_time(RTC_Handle *handle);
+
 
 void main()
 {
     RTC_Handle rtc_handle;
-    RTC_Init();
-    UART_Init();
-    MAX7219_Init();
+    RTC_Init(); //init real time clock
+    UART_Init(); //init UART
+    MAX7219_Init(); //init 7-seg display driver
     while(1)
     {
         //get time
         RTC_getTime(&rtc_handle);
-        //Display time on terminal
-        UART_PrintNum(rtc_handle.hours);
-        UART_SendStr(":");
-        UART_PrintNum(rtc_handle.minutes);
-        UART_SendStr(":");
-        UART_PrintNum(rtc_handle.seconds);
-        UART_SendStr("      ");
-        MAX7219_SendDigit(2, 6);
-        MAX7219_SendDigit(1, 5);
+        //display time
+        display_time(&rtc_handle);
         _delay_ms(1000);
     }
 
+}
+
+void display_time(RTC_Handle *handle)
+{
+    //display each time interval
+    MAX7219_SendDigit(1,(handle->hours/10));
+    MAX7219_SendDigit(2,handle->hours%10);
+    MAX7219_SendDigit(3,handle->minutes/10);
+    MAX7219_SendDigit(4,handle->minutes%10);
+    MAX7219_SendDigit(5,handle->seconds/10);
+    MAX7219_SendDigit(6,handle->seconds%10);
 }
