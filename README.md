@@ -11,7 +11,7 @@ Used I2C communication protocol to interface with the DS1307, and used SPI commu
 5. type ```make all``` for building the entire project and uploading it on the Atmega32
 
 ## Connections
-[!schematic](sim.jpg)
+![schematic](sim.jpg)
 
 ## Demo
-[!simulation](digital_clock_-_Proteus_8_Professional_-_Schematic_Capture_2023-07-02_03-17-32_AdobeExpress.gif)
+![simulation](digital_clock_-_Proteus_8_Professional_-_Schematic_Capture_2023-07-02_03-17-32_AdobeExpress.gif)
